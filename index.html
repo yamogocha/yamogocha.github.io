@@ -1,0 +1,235 @@
+<!doctype html>
+<html style="scroll-behavior:smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    const toggleMobileMenu = () => {
+      const overflow = document.getElementById('body').style.overflow
+      if (overflow === "auto") {
+        document.getElementById('body').style.overflow = 'hidden'
+        document.getElementById('mobile-nav').style.opacity = '100'
+        document.getElementById('bar-one').style.transform = 'rotate(-45deg) translate(-5px, 5px)'
+        document.getElementById('bar-two').style.opacity = '0'
+        document.getElementById('bar-three').style.transform = 'rotate(45deg) translate(-5px, -5px)'
+      } else {
+        document.getElementById('body').style.overflow = 'auto'
+        document.getElementById('mobile-nav').style.opacity = '0'
+        document.getElementById('bar-one').style.transform = 'rotate(0) translate(0,0)'
+        document.getElementById('bar-two').style.opacity = '100'
+        document.getElementById('bar-three').style.transform = 'rotate(0) translate(0,0)'
+      }
+    }
+  </script>
+</head>
+
+<body id="body" style="overflow: auto;font-family: 'Helvetica', 'Arial', sans-serif;font-weight: 100;">
+  <!-- Nav -->
+  <header class="z-10 sticky top-0 bg-white shadow-md shadow-[#14365c1a]">
+    <nav class="max-w-[980px] m-auto flex justify-between items-center py-5 px-10 lg:px-0">
+      <span class="text-[#00305B] text-[22px]">GOC Legal, P.C.</span>
+      <ul class="bg-white hidden lg:flex flex-row list-none">
+        <li><a href="#home" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">HOME</a></li>
+        <li><a href="#about-us" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">ABOUT US
+        </a></li>
+        <li><a href="#practice-areas" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">PRACTICE AREAS</a></li>
+        <li><a href="#our-mission" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">OUR MISSION & VALUES
+        </a></li>
+        <li><a href="#attorneys" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">ATTORNEYS
+        </a></li>
+        <li><a href="#contact" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">CONTACT
+        </a></li>
+      </ul>
+      
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="block z-10 lg:hidden" onClick="toggleMobileMenu()">
+        <span id="bar-one" class="transition duration-500 ease-in-out w-[35px] h-[3px] m-1 bg-[#00305B] rounded block"></span>
+        <span id="bar-two" class="transition duration-500 ease-in-out w-[35px] h-[3px] m-1 bg-[#00305B] rounded block"></span>
+        <span id="bar-three" class="transition duration-500 ease-in-out w-[35px] h-[3px] m-1 bg-[#00305B] rounded block"></span>
+      </div>
+      <ul id="mobile-nav" class="transition duration-500 ease-in-out list-none bg-white flex flex-col absolute top-0 right-0 opacity-0 block lg:hidden">
+        <li onClick="toggleMobileMenu()"><a href="#home" class="inline-block px-5 py-3 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">HOME</a></li>
+        <li onClick="toggleMobileMenu()"><a href="#about-us" class="inline-block px-5 py-3 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">ABOUT US
+        </a></li>
+        <li onClick="toggleMobileMenu()"><a href="#practice-areas" class="inline-block px-5 py-3 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">PRACTICE AREAS</a></li>
+        <li onClick="toggleMobileMenu()"><a href="#our-mission" class="inline-block px-5 py-3 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">OUR MISSION & VALUES
+        </a></li>
+        <li onClick="toggleMobileMenu()"><a href="#attorneys" class="inline-block px-5 py-3 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">ATTORNEYS
+        </a></li>
+        <li onClick="toggleMobileMenu()"><a href="#contact" class="inline-block px-5 py-3 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">CONTACT
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Welcome -->
+  <section id="home" class="w-full h-[450px] lg:h-[650px]">
+    <div class="w-full h-full bg-[url('https://static.wixstatic.com/media/5bfb6f_a463284fd84145f292a32dc0f0e0cc31.jpg/v1/fill/w_640,h_744,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5bfb6f_a463284fd84145f292a32dc0f0e0cc31.jpg')] lg:bg-[url('https://static.wixstatic.com/media/5bfb6f_a463284fd84145f292a32dc0f0e0cc31.jpg/v1/fill/w_1536,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5bfb6f_a463284fd84145f292a32dc0f0e0cc31.jpg')]">
+    <div class="w-full h-full bg-[#00305b30] flex lg:block justify-center items-center">
+      <div class="w-[90%] lg:w-2/5 lg:h-full bg-[#00305bc7] flex flex-col justify-center items-start lg:items-end text-white p-5 lg:p-10">
+        <h1 class="w-[300px] text-[42px] font-bold pb-10">GOC LEGAL, P.C.</h1>
+        <p class="w-[300px] text-[22px] pb-5">We fight to get you the money you deserve.</pc>
+        <p class="w-[300px] text-[22px]">Because for us, it's personal.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!-- About Us -->
+  <section id="about-us" class="bg-[#00305b]">
+    <div class="max-w-[980px] h-full m-auto flex flex-col lg:flex-row justify-between px-10 py-10 lg:px-0 lg:py-20 text-white">
+      <h2 class="text-[42px] pb-8"><div class="font-bold">ABOUT</div>US</h2>
+      <div class="w-full lg:w-2/3">
+        <p class="text-[22px] text-justify pb-8">At GOC Legal, P.C., we take a personal approach to your injury case. You’ll receive the
+        dedicated attention of an expert team that respects you, truly listens, and understands what it takes to win you
+        the best possible settlement. Unlike the larger firms, we treat each client like family and care deeply about
+        getting you what you deserve — so you can heal and move forward with your life.</p>
+        <p class="text-[22px] text-justify pb-8">
+        Why is having a personal injury attorney important? Being injured in an accident can turn your life upside down in
+        a heartbeat. The truth is, insurance companies want to pay as little as possible to resolve your injury claim, or
+        even try to deny it. Having the right personal injury lawyer in your corner is essential to protect you and ensure
+        you receive the highest possible compensation for your injuries. So if you or a loved one has been injured in the
+        Bay Area, contact GOC Legal, P.C. today for a free consultation.</p>
+        <ol class="pl-10">
+          <li class="text-[22px] list-disc">15+ years experience</li>
+          <li class="text-[22px] list-disc">Personal attention and small team</li>
+          <li class="text-[22px] list-disc">Trusted across the Bay Area</li>
+          <li class="text-[22px] list-disc">You don't pay unless we win</li>
+          <li class="text-[22px] list-disc">Millions recovered for our clients </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- Practice Areas -->
+  <section id="practice-areas" class="">
+    <div class="lg:absolute w-full lg:w-2/5 lg:h-[450px] bg-[#eaf4f6] flex justify-start lg:justify-end px-10 py-10 lg:py-20">
+      <h2 class="w-[300px] text-[42px] text-[#00305B]"><div class="font-bold">PRACTICE</div>AREAS</h2>
+    </div>
+    <div class="max-w-[980px] m-auto flex flex-col lg:flex-row justify-between flex-wrap px-10 lg:px-0 py-10 lg:py-20">
+      <div class="lg:invisible relative lg:max-w-[250px] hidden lg:flex flex-col pb-10">
+        <p class="text-[#0f4c85] text-[14px] pl-10"><span class="font-bold">NOTE:</span> These are only a sample of the types of cases GOC Legal, P.C. handles.  If you have been injured and believe another party may be responsible for your injuries and damages, please call our office to schedule a consultation.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">VEHICLE ACCIDENTS</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">We represent drivers and passengers injured in car accidents.  to recover present and future medical expenses, lost wages (including future reduced income or lost earning potential), and compensation for pain and suffering, emotional distress, and loss of quality of life. We also work with accident reconstructionists, medical professionals, and forensic experts, if appropriate, to determine the cause of the accident and prepare your case.  The firm’s personal injury practice includes car, truck, bus, taxi, rental car, bike, boat, and motorcycle accidents.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">PREMISES LIABILITY</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">We represent people injured by unreasonably dangerous conditions on property and land.   This includes injuries caused by falls from wet/slippery floors, defective steps, uneven pavement, or other dangerous walkway conditions. Other common causes of slip, trip, and fall accidents can include unsecured flooring materials, such as rugs or carpets; raised or cracked sidewalks; and sudden changes in elevation such as ramps or steps.  Property owners are required to warn of hazardous conditions that exist , such as a warning that a floor had just been mopped and was still wet.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">DOG ATTACKS</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">Our firm thoroughly investigates bites and attacks and works to hold responsible animal owners accountable under the law.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">PEDESTRIAN vs. VEHICLE ACCIDENTS</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">California drivers are required to operate their vehicles using reasonable care.  When a driver negligently strikes a pedestrian they can be held liable for the damages they cause. This may include compensation for the person’s injuries, medical bills and lost earnings or earnings capacity.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">COMMERCIAL VEHICLES/ TRUCKING</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">Often, auto accidents involve a person driving a commercial vehicle or truck owned by another person or business.  An employer can be directly liable for the negligence or wrongdoing of their employee or agent if that representative was acting on behalf of and at the direction of their boss.  Employers can also be liable for negligent entrustment of the vehicle to an employee and negligent hiring of the employee.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">WRONGFUL DEATH</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">There is no amount of compensation that will heal the loss of a family member as a result of another party’s negligence.  You may be entitled to monetary damages that can help offset the financial strain you and your family may face due to your loved one’s death.  We can help advocate for you and ensure your interests are protected throughout litigation against the responsible party.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <span class="absolute -left-3 top-2 bg-[#41b7c4] w-[10px] h-[10px] mx-5"></span>
+        <h3 class="text-[20px] text-[#00305B] pl-10 pb-5">CONSTRUCTION SITE ACCIDENTS</h3>
+        <p class="text-[#0f4c85] text-[14px] pl-10">We represent individuals in claims against employers for failure to maintain safe and compliant worksites.  The most common construction site accident is falling, where workers fall from high places because the ground on which workers are standing is not stable. Other common construction site accidents include electrocution, crane accidents, and defective/malfunctioning equipment.</p>
+      </div>
+      <div class="relative lg:max-w-[250px] flex flex-col pb-10">
+        <p class="text-[#0f4c85] text-[14px] pl-10"><span class="font-bold">NOTE:</span> These are only a sample of the types of cases GOC Legal, P.C. handles.  If you have been injured and believe another party may be responsible for your injuries and damages, please call our office to schedule a consultation.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Our Mission -->
+  <section id="our-mission" class="bg-[#00305b]">
+    <div class=" max-w-[980px] m-auto flex flex-col px-10 lg:px-0 py-10 lg:py-20 text-white">
+      <h2 class="text-[42px] text-center font-bold pb-8">OUR MISSION</h2>
+      <p class="text-justify text-[22px] text-center">GOC Legal, P.C. guides injured individuals and families through the legal process and obtains maximum compensation for their injuries and damages.  By offering caring, experienced, and results-proven legal representation, we help clients move forward with their lives and obtain a fair resolution of their claims.</p>
+    </div>
+  </section>
+  <section class="max-w-[980px] m-auto flex flex-col text-[#00305B] px-10 lg:px-0 py-10 lg:py-20">
+    <h2 class="text-[42px] text-center font-bold pb-8">OUR VALUES</h2>
+    <div>
+      <h3 class="text-[38px]">Relentless</h3>
+      <p class="text-justify text-[22px] pb-10">We won’t stop fighting. At GOC Legal, P.C., we take your justice personally. We understand the devastation that can arise from an unexpected injury, and we work aggressively and tirelessly to pursue the full compensation you need to make a full recovery. This includes, but is not limited to, medical expenses, pain and suffering, loss of earnings, and property damage. From day one to closing the case, our focus remains on one thing: results. We know the angles to explore, corners to investigate, when to tighten the net, and how to navigate the unexpected.</p>
+    </div>
+    <div>
+      <h3 class="text-[38px]">Communicative</h3>
+      <p class="text-justify text-[22px] pb-10">As a smaller and younger firm, GOC Legal, P.C. is able to take a more individualized approach to each client and offer the unique care and dedication needed to be successful. With us you’re a person, not a case number.  We communicate with you throughout the entire process, and always listen to you, to ensure you understand your case inside and out.</p>
+    </div>
+    <div>
+      <h3 class="text-[38px]">Communicative</h3>
+      <p class="text-justify text-[22px] pb-10">As a smaller and younger firm, GOC Legal, P.C. is able to take a more individualized approach to each client and offer the unique care and dedication needed to be successful. With us you’re a person, not a case number.  We communicate with you throughout the entire process, and always listen to you, to ensure you understand your case inside and out.</p>
+    </div>
+    <div>
+      <h3 class="text-[38px]">Compassionate</h3>
+      <p class="text-justify text-[22px] pb-10">We understand your pain and provide strength in your most challenging time. Through our empathy, we convincingly tell your story to the decision makers, whether insurance adjusters or arbitrators or judges.</p>
+    </div>
+  </section>
+  <!-- Attorneys -->
+  <section id="attorneys" class="bg-[#eaf4f6]">
+    <div class="max-w-[980px] m-auto flex flex-col text-[#00305B] px-10 lg:px-0 py-10 lg:py-20">
+      <h2 class="text-[42px] text-center font-bold pb-8">ATTORNEYS</h2>
+      <div class="flex flex-col items-center">
+        <img class="w-[164px] h-[220px] pb-5" alt="head shot.PNG" src="https://static.wixstatic.com/media/373f11_2a16be03411e46fc90832b7a2cf03ad2~mv2.png/v1/fill/w_328,h_440,al_c,lg_1,q_85,enc_auto/head%20shot_PNG.png" style="width: 164px; height: 220px; object-fit: cover;">
+        <h3 class="text-[20px]">Greg O'Connell</h3>
+        <span class="text-[16px] pb-8">Attorney & Founder</span>
+      </div>
+      <p class="text-[16px] pb-8">Greg O’Connell is a relentless advocate for justice.  Greg combines superior trial and courtroom skills with compassionate interpersonal skills to help injured individuals and families of loved ones catastrophically injured or killed by someone else's negligence.   He has more than 15 years of experience litigating high-stakes cases in the trial courts, federal courts, and courts of appeal.</p>
+      <p class="text-[16px] pb-8">Greg began his legal career as a trial attorney at the Alameda County District Attorney’s Office where he prosecuted serious felonies and obtained verdicts in 35 jury trials.  During the eight years Greg served as a trial attorney in the criminal justice system, he honed courtroom-proven trial skills, poise, and knowledge of the law.  Greg is not afraid to take a case to trial in order to obtain a successful outcome for a client. </p>
+      <p class="text-[16px] pb-8">After leaving the Alameda County District Attorney’s Office, Greg transitioned to plaintiff’s personal injury because he wanted to help people more directly.  Greg worked for several prominent plaintiff law firms including the Dolan Law Firm and Rains Lucia Stern St. Phalle & Silver, P.C., where he made a name for himself as an aggressive and compassionate trial attorney, securing multi-million dollar settlements and verdicts for clients.</p>
+      <p class="text-[16px] pb-8">Greg has now brought his extensive knowledge and experience to GOC Legal, P.C., which he founded in 2020 with the purpose of expertly representing individuals around the Bay Area who have been injured and seek full and fair justice in the courts.  He excels in all areas of litigation, from pre-trial case investigation, pre-litigation settlement offers and case strategy, to fact discovery, expert witness examination, motion practice, trial preparation, mediation, and settlement, or if necessary, trial.  Greg’s courtroom skills allow him to connect with juries to achieve significant verdicts for his personal injury clients.  Greg is an accomplished litigator in a variety of areas including auto accidents, auto vs. pedestrian accidents, premises liability, contract disputes, professional malpractice, trucking, and wrongful death.</p>
+      <p class="text-[16px]">Greg is a Bay Area native and resides in Oakland with his wife and dog. He is an alumnus of UCLA and earned his law degree from Golden Gate University in San Francisco. When he is not working passionately on behalf of his clients, he enjoys playing golf, swimming, spending time with his family, discovering new local restaurants, and being a proud member of Dub Nation and the 49ers Faithful.</p>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="">
+    <div class="w-full h-[1380px] lg:h-[855px] bg-[url('https://static.wixstatic.com/media/5bfb6f_c9a631e8e43443cb9d7ad97133d9d83d.jpg/v1/fill/w_367,h_1080,al_c,q_85,enc_auto/5bfb6f_c9a631e8e43443cb9d7ad97133d9d83d.jpg')] lg:bg-[url('https://static.wixstatic.com/media/5bfb6f_c9a631e8e43443cb9d7ad97133d9d83d.jpg/v1/fill/w_1536,h_854,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5bfb6f_c9a631e8e43443cb9d7ad97133d9d83d.jpg')]">
+      <div class="w-full h-[1380px] lg:h-[855px] bg-[#1f5286d9]">
+        <div class="lg:absolute w-full lg:w-2/5 lg:h-[855px] bg-[#164576cf] flex justify-start lg:justify-end px-10 py-10 lg:py-20">
+          <h1 class="w-[300px] text-[42px] text-white font-bold">GOC LEGAL, P.C.</h1>
+        </div>
+        <div class="max-w-[980px] m-auto flex justify-between lg:justify-end px-10 lg:px-0 py-10 lg:py-20 text-white">
+          <div class="">
+            <h2 class="text-[20px] font-bold pb-8">CONTACT US</h2>
+            <p class="text-[16px] pb-5"><span class="font-bold">Address:</span> 10 Villanova Drive, Oakland, CA 94611</p>
+            <p class="text-[16px] pb-5"><span class="font-bold">Email:</span> oconnell.gregory@gmail.com</p>
+            <p class="text-[16px] pb-5"><span class="font-bold">Tel:</span> (510) 846-0928</p>
+            <a class="underline inline-block pb-8" href="https://www.google.com/maps/place/10+Villanova+Dr,+Oakland,+CA+94611/@37.8413599,-122.2150532,15z/data=!3m1!4b1!4m6!3m5!1s0x80857d5fe63209f7:0xfafdf712a2c54c46!8m2!3d37.8413613!4d-122.1966209!16s%2Fg%2F11cpb80wl9?entry=ttu" target="_blank" rel="noreferrer noopener" class="wixui-rich-text__text">Click Here to Find Us</a>
+            <p class="text-[16px] pb-5">For any general inquiries, please fill in the following contact form:</p>
+            <form action="mailto:oconnell.gregory@gmail.com" method="post" class="flex flex-wrap lg:justify-between">
+              <div class="w-full lg:w-[280px]">
+                <label class="block pb-1">First Name *</label>
+                <input class="w-full p-2 mb-5 outline-none text-[#00305B]" name="first-name" type="text" required>
+                <label class="block pb-1">Last Name *</label>
+                <input class="w-full p-2 mb-5 outline-none text-[#00305B]" name="last-name" type="text" required>
+                <label class="block pb-1">Email *</label>
+                <input class="w-full p-2 mb-5 outline-none text-[#00305B]" name="email" type="email" required>
+                <label class="block pb-1">Subject *</label>
+                <input class="w-full p-2 mb-5 outline-none text-[#00305B]" name="subject" type="text" required>
+              </div>
+              <div class="w-full lg:w-[280px]">
+                <label class="block pb-1">Message *</label>
+                <textarea class="w-full h-[305px] p-2 mb-5 outline-none text-[#00305B]" name="message" ></textarea>
+              </div>
+              <input type="submit" class="w-full border border-white p-2 bg-[#0f4c85] hover:bg-[#00305b] transition duration-500 ease-in-out"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#00305b] flex flex-col items-center p-5">
+    <a href="#home" class="flex flex-col items-center"><img alt="Back to Top" class="w-[35px] h-[21px] rotate-180" src="https://static.wixstatic.com/media/dbbdc91820535cbbeb0664011cb93255.png/v1/fill/w_46,h_24,al_c,lg_1,q_85,enc_auto/dbbdc91820535cbbeb0664011cb93255.png" style="object-fit: contain; object-position: center center;">
+    <span class="text-white text-center pt-3">BACK TO TOP</span></a>
+  </section>
+  <footer class="bg-white"><div class="max-w-[980px] m-auto text-[14px] text-[#0f4c85] p-8">© 2024 by GOC LEGAL, P.C.</d></footer>
+</body>
