@@ -60,7 +60,7 @@
     }
   })();
 </script>
-  <!-- Google tag for google ads (gtag.js) -->
+  <!-- Google tag on google ads (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17444498530"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -69,34 +69,7 @@
 
   gtag('config', 'AW-17444498530');
 </script>
- <!-- Event snippet for visited and clicked website conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17444498530/h7lsCID3woYbEOLYl_5A',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
 </head>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1D4WSK77V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C1D4WSK77V');
-</script>
 
 <body id="body" style="overflow: auto;font-family: 'Helvetica', 'Arial', sans-serif;font-weight: 100;">
   <!-- Nav -->
@@ -115,7 +88,8 @@ function gtag_report_conversion(url) {
           </a></li>
         <li><a href="#attorneys" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">ATTORNEYS
           </a></li>
-        <li><a href="#contact" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]">CONTACT
+        <li><a href="#contact" class="px-5 cursor-pointer text-[12px] text-[#0f4c85] hover:text-[#028695]" onClick="gtag('event', 'conversion', {
+      'send_to': 'AW-17444498530/h7lsCID3woYbEOLYl_5A'});">CONTACT
           </a></li>
       </ul>
 
@@ -407,7 +381,8 @@ function gtag_report_conversion(url) {
             <p class="text-[16px] pb-5"><span class="font-bold">Address:</span> 10 Villanova Drive, Oakland, CA 94611
             </p>
             <p class="text-[16px] pb-5"><span class="font-bold">Email:</span> greg@goclegal.com</p>
-            <a href="tel:+15108460928" class="block text-[16px] pb-5"><span class="font-bold">Tel:</span> (510) 846-0928</a>
+            <a href="tel:+15108460928" class="block text-[16px] pb-5" onClick="gtag('event', 'conversion', {
+      'send_to': 'AW-17444498530/h7lsCID3woYbEOLYl_5A'});"><span class="font-bold">Tel:</span> (510) 846-0928</a>
             <a class="underline inline-block pb-8"
               href="https://www.google.com/maps/place/10+Villanova+Dr,+Oakland,+CA+94611/@37.8413599,-122.2150532,15z/data=!3m1!4b1!4m6!3m5!1s0x80857d5fe63209f7:0xfafdf712a2c54c46!8m2!3d37.8413613!4d-122.1966209!16s%2Fg%2F11cpb80wl9?entry=ttu"
               target="_blank" rel="noreferrer noopener" class="wixui-rich-text__text">Click Here to Find Us</a>
@@ -428,7 +403,8 @@ function gtag_report_conversion(url) {
                 <textarea class="w-full h-[305px] p-2 mb-5 outline-none text-[#00305B]" name="message"></textarea>
               </div>
               <input type="submit"
-                class="w-full border border-white p-2 bg-[#0f4c85] hover:bg-[#00305b] transition duration-500 ease-in-out" />
+                class="w-full border border-white p-2 bg-[#0f4c85] hover:bg-[#00305b] transition duration-500 ease-in-out" onClick="gtag('event', 'conversion', {
+      'send_to': 'AW-17444498530/h7lsCID3woYbEOLYl_5A'});"/>
             </form>
           </div>
         </div>
