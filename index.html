@@ -60,8 +60,7 @@
     }
   })();
 </script>
-</head>
-<!-- Google tag for google ads (gtag.js) -->
+  <!-- Google tag for google ads (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17444498530"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -70,6 +69,25 @@
 
   gtag('config', 'AW-17444498530');
 </script>
+ <!-- Event snippet for visited and clicked website conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17444498530/h7lsCID3woYbEOLYl_5A',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+</head>
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1D4WSK77V"></script>
 <script>
