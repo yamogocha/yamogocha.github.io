@@ -47,6 +47,19 @@
       }
     }
   </script>
+  <script>
+  (function() {
+    // Force HTTPS
+    if (location.protocol !== 'https:') {
+      location.replace('https://' + location.hostname + location.pathname + location.search);
+      return;
+    }
+    // Force non-www version
+    if (location.hostname.startsWith('www.')) {
+      location.replace('https://goclegal.com' + location.pathname + location.search);
+    }
+  })();
+</script>
 </head>
 <!-- Google tag for google ads (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17444498530"></script>
