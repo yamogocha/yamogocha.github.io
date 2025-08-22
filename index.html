@@ -56,19 +56,6 @@
       }
     }
   </script>
-  <script>
-  (function() {
-    // Force HTTPS
-    if (location.protocol !== 'https:') {
-      location.replace('https://' + location.hostname + location.pathname + location.search);
-      return;
-    }
-    // Force non-www version
-    if (location.hostname.startsWith('www.')) {
-      location.replace('https://goclegal.com' + location.pathname + location.search);
-    }
-  })();
-</script>
 <!-- Schema.org Markup (Legal Service) -->
 <script type="application/ld+json">
   {
