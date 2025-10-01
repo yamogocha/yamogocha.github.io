@@ -58,6 +58,28 @@
                 document.getElementById('bar-three').style.transform = 'rotate(0) translate(0,0)'
             }
         }
+        const form = document.getElementById('contactForm')
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault()
+            const formData = new FormData(form)
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                if (response.ok) {
+                    alert('Thank you! Our firm will get back to you shortly.')
+                    form.reset()
+                } else {
+                    alert('Oops! Something went wrong. Please try again.')
+                }
+            } catch (error) {
+                console.error('Error:', error)
+            }
+        })
     </script>
     <!-- Schema.org Markup (Legal Service) -->
     <script type="application/ld+json">
@@ -516,7 +538,7 @@
                             Us</a>
                         <p class="text-[16px] pb-5">For any general inquiries, please fill in the following contact
                             form:</p>
-                        <form action="https://formspree.io/f/mpwydejv" method="post" class="flex flex-wrap lg:justify-between">
+                        <form id="contactForm" action="https://formspree.io/f/mpwydejv" method="post" class="flex flex-wrap lg:justify-between">
                             <div class="w-full lg:w-[260px]">
                                 <label class="block pb-1">First Name *</label>
                                 <input class="w-full p-2 mb-5 outline-none text-[#00305B]" name="first-name" type="text"
@@ -560,5 +582,5 @@
     </footer>
 </body>
 
-
+</html>
 
